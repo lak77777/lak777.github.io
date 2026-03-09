@@ -1,15 +1,17 @@
-title: "Global Life Hack Lab"
-description: "Smart solutions for your daily life - Updated every 45 mins"
+title: "Global Life Hacks"
+description: "Expertly curated life hacks for your daily efficiency."
 url: "https://lak77777.github.io"
-baseurl: "" 
+baseurl: "" # 아이디 중복 방지 (비워두세요)
 
-# [디자인 설정] 이 한 줄이 블로그 전체 디자인을 결정합니다
-remote_theme: pages-themes/cayman@v0.2.0
+# [디자인 입히기] Clean Blog 테마 적용
+remote_theme: StartBootstrap/startbootstrap-clean-blog-jekyll
 
-# [상위 노출 설정]
+# [상위 노출 및 플러그인]
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
-  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-sitemap # 구글에 글 목록 자동 제출
 
+# [개별 글 노출 주소 방식]
 permalink: /posts/:title/
