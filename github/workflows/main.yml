@@ -2,8 +2,8 @@ name: Auto Post with Gemini
 
 on:
   schedule:
-    - cron: '*/45 * * * *' # 45분마다 자동 실행
-  workflow_dispatch: # 이 줄이 있어야 'Run workflow' 버튼이 생깁니다.
+    - cron: '*/45 * * * *'
+  workflow_dispatch: # 이 줄이 있어야 '액션' 탭에 이름이 뜹니다.
 
 jobs:
   build:
