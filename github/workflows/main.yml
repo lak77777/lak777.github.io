@@ -1,25 +1,29 @@
-name: Auto Post
+name: Auto Post with Gemini
+
 on:
   schedule:
-    - cron: '0 */2 * * *' # 2시간마다 실행 (하루 총 12개)
-  workflow_dispatch:      # 지금 바로 실행해보기 버튼
+    - cron: '*/45 * * * *' # 45분마다 자동 실행
+  workflow_dispatch: # 이 줄이 있어야 'Run workflow' 버튼이 생깁니다.
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v4
-        with: {python-version: '3.9'}
-      - run: pip install google-generativeai
-      - name: Run AI
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: pip install google-generativeai
+      - name: Run Auto Post
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python auto_post.py
-      - name: Push
+      - name: Commit and Push
         run: |
-          git config --local user.name "bot"
-          git config --local user.email "bot@github.com"
-          git add .
-          git commit -m "New English Post (12 posts a day)"
+          git config --global user.name "AutoBot"
+          git config --global user.email "bot@github.com"
+          git add _posts/*.md
+          git commit -m "New Life Hack Post added" || exit 0
           git push
