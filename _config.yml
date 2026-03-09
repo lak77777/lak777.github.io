@@ -1,11 +1,13 @@
 title: "Smart Life Lab"
 description: "Expertly curated life hacks for your daily efficiency."
-remote_theme: pages-themes/architect@v0.2.0 # 시원하고 전문적인 디자인
+theme: minima  # 버튼 없는 깔끔한 블로그 전용 테마로 교체
 plugins:
-  - jekyll-remote-theme
+  - jekyll-feed
   - jekyll-seo-tag
 
-# 해외 타겟팅 설정
+# 개별 글의 주소를 '블로그주소/글제목'으로 고정 (검색 노출에 가장 중요)
+permalink: /posts/:title/
+
 lang: en-US
 url: "https://lak77777.github.io"
-baseurl: "/lak777.github.io"
+baseurl: "" # 주소를 깔끔하게 만들기 위해 비웁니다
