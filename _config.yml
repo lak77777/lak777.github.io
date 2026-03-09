@@ -1,15 +1,15 @@
-title: "Global Life Hacks" # 구글 검색에 뜰 사이트 이름
-description: "Professional life hacks and tips for daily efficiency."
+title: "Global Life Hack Lab"
+description: "Smart solutions for your daily life - Updated every 45 mins"
 url: "https://lak77777.github.io"
-baseurl: "" # 아이디 중복 방지
+baseurl: "" 
 
-# [핵심] 모든 글을 구글이 개별 페이지로 인식하게 함
-permalink: /posts/:title/
+# [디자인 설정] 이 한 줄이 블로그 전체 디자인을 결정합니다
+remote_theme: pages-themes/cayman@v0.2.0
 
-# [SEO] 검색 엔진이 좋아하는 태그를 자동으로 생성
+# [상위 노출 설정]
 plugins:
+  - jekyll-remote-theme
   - jekyll-seo-tag
-  - jekyll-feed
-  - jekyll-sitemap # 구글에 '내 글 목록 여기 있다'고 알려주는 지도
+  - jekyll-sitemap
 
-theme: minima
+permalink: /posts/:title/
