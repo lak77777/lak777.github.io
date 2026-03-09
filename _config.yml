@@ -1,3 +1,8 @@
-title: Lak's English Tips
-description: Simple and practical life hacks in English.
+title: "Smart Life Lab: Everyday Hacks"
+description: "Discover simple, effective, and clever life hacks to upgrade your daily routine. Smart solutions for a better life."
+baseurl: "/lak777.github.io" # 저장소 이름에 맞게 확인하세요!
+url: "https://lak77777.github.io"
 theme: minima
+
+# 해외 유저들을 위한 언어 설정
+lang: en-US
