@@ -1,13 +1,15 @@
-title: "Smart Life Lab"
-description: "Expertly curated life hacks for your daily efficiency."
-theme: minima  # 버튼 없는 깔끔한 블로그 전용 테마로 교체
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+title: "Global Life Hacks" # 구글 검색에 뜰 사이트 이름
+description: "Professional life hacks and tips for daily efficiency."
+url: "https://lak77777.github.io"
+baseurl: "" # 아이디 중복 방지
 
-# 개별 글의 주소를 '블로그주소/글제목'으로 고정 (검색 노출에 가장 중요)
+# [핵심] 모든 글을 구글이 개별 페이지로 인식하게 함
 permalink: /posts/:title/
 
-lang: en-US
-url: "https://lak77777.github.io"
-baseurl: "" # 주소를 깔끔하게 만들기 위해 비웁니다
+# [SEO] 검색 엔진이 좋아하는 태그를 자동으로 생성
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap # 구글에 '내 글 목록 여기 있다'고 알려주는 지도
+
+theme: minima
